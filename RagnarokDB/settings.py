@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 #os.path.join(BASE_DIR, "RagnarokDatabase/static"),)
 
 LOGIN_REDIRECT_URL = "RagnarokDatabase/mvpkills.html"
-LOGOUT_REDIRECT_URL = "registration/login.html"
+LOGOUT_REDIRECT_URL = "login1"
 
 STATIC_ROOT = (os.path.join(BASE_DIR, "static_root"))
 
