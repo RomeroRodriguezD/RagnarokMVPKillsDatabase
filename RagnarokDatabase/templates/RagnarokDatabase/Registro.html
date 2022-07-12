@@ -1,0 +1,58 @@
+
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'registro.css' %}">
+</head>
+<body>
+
+<nav>
+
+    <ul>
+  <li><a class="active">Ragnarok MVP Killing Database</a></li>
+        {% if user.is_authenticated %}
+        <li><a  href="{% url 'database' %}">Database</a></li>
+        <li class="log"><a  href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+          <li class="log"><a href="{% url 'login1' %}">Log in</a></li>
+        {% endif %}
+
+
+</ul>
+
+</nav>
+
+
+{% block content %}
+<video autoplay muted loop id="myVideo">
+  <source src="{% static 'video.mp4' %}" type="video/mp4">
+</video>
+
+<div >
+    <img class="kades" src="{% static 'kades.gif' %}">
+        <img class="timeholder" src="{% static 'timeholder.gif' %}">
+</div>
+
+<div class="container">
+<h1>Registration</h1>
+<p>
+    <br>
+    <form class="styleform" action="register" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <input class="submit" type="submit" value="Register">
+
+    </form>
+    </p>
+</div>
+
+{% endblock %}
+
+</body>
+<footer class="fixed-bottom pb-20" style="text-align:center; font-size:25; background-color: grey">COPYRIGHT Chimpancé Inalámbrico 2022</footer>
+</html>

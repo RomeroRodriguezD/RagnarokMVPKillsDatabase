@@ -1,0 +1,33 @@
+CRUD IN ORM
+
+Insertar un nuevo registro:
+
+u = Model(variable=valor, variable2=valor)
+u.save()
+
+Insertar registro con foreignkeys:
+
+u = Model(variableexterna = nombredelvalorexterno)
+
+Valores de un modelo:
+
+Model.objects.values()
+
+Filtrar registros por valores:
+
+Model.objects.filter(variable=valor).values()
+
+Eliminar registro:
+
+Model.objects.filter(variable=valor).delete()
+Model.objects.values()
+
+Actualizar registro:
+
+Model.objects.filter(variable=valor).update(variable=valor)
+Model.objects.values()
+
+Ordenar:
+
+Model.objects.values().order_by('variable')
+Model.objects.values().order_by('-variable') -> Orden inverso?

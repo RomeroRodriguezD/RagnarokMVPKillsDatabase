@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVP Database</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'registro.css' %}">
+</head>
+<body>
+
+<nav>
+
+    <ul>
+  <li><a class="active">Ragnarok MVP Killing Database</a></li>
+        {% if user.is_authenticated %}
+        <li><a  href="{% url 'database' %}">Database</a></li>
+        <li class="log"><a  href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+          <li class="log"><a href="{% url 'login1' %}">Log in</a></li>
+        {% endif %}
+
+
+</ul>
+
+</nav>
+{% block content %}
+
+<video autoplay muted loop id="myVideo">
+  <source src="{% static 'video.mp4' %}" type="video/mp4">
+</video>
+<div >
+    <img class="nidhog" src="{% static 'nidhogreversed.gif' %}">
+        <img class="fenrir" src="{% static 'fenrir.gif' %}">
+</div>
+
+    {% if user.is_authenticated %}
+
+<div class="container">
+
+    <form action="" method="POST">
+            {% csrf_token %}
+            {{ mvp_kills }}
+        <input class="btn btn-primary" type="submit" value="Add kills"/>
+        <input class="btn btn-primary" type="submit" name="check" value="Check"/>
+    </form>
+    {% if amount %}
+
+    Número de kills del MVP {{ nombre }}:    {{ num_kills }}
+
+    {% endif %}
+
+    {% if nomvp %}
+
+        You haven't killed any MVP of that kind yet.
+</div>
+    {% endif %}
+
+    {% else %}
+<div class="container">
+    <p style="font-size: 30px;">Log in to use the MVP Database.</p>
+</div>
+    {% endif %}
+
+    {% endblock %}
+
+</body>
+
+</html>

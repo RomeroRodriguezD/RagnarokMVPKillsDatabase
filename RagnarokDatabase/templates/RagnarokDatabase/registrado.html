@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "RagnarokDatabase/base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invent</title>
+</head>
+<body>
+
+{% block content %}
+
+Registered as {{ form.username }}, congratulations, you can now start to register your own MVP kills.
+
+<br>
+
+<a href="{% url 'register' %} "> Back </a>
+
+{% endblock %}
+
+
+
+</p>
+</body>
+</html>

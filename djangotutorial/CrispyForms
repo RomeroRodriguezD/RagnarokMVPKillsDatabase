@@ -1,0 +1,9 @@
+etiquetas clave en HTML:
+
+{% load crispy_form_tags %}
+
+debajo del csrf_token
+
+{% form|crispy %}
+
+Esto parece ir de poner formularios bonitos.

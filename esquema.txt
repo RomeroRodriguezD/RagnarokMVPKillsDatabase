@@ -1,0 +1,34 @@
+Estructura de la web:
+
+Páginas
+
+-Index (con log in)
+-Registro.
+-Página de confirmación de registro.
+-Página de conteo (añadir/modificar/consultar) Post requests de consulta de MVP's sueltos o del total. Put requests. Podría ser una API? Ni idea.
+
+
+Esto da una estructura sencilla de 4 páginas.
+
+Backend:
+
+-BBDD PostgreSQL que ya uso aparte.  -> ¿Conectar con Django Models object? Apenas tendría dos variables por MVP (nombre y cantidad) y 2 por usuario (usuario, contraseña)
+-Carpeta Static debe contener:
+    Images (de cada MVP y una portada de índice.
+    CSS (Por determinar si usarán todas las páginas el mismo, quizá sí). Media queries para la vista móvil.
+
+-Variables de entorno con las claves SQL.
+
+SUPERUSER: david, password: barberay2
+
+Tablas:
+
+    MVP (cada MVP, one-to-many) (Name(PK), id (PK))
+    Kills (Many-to-One) (User, MVP, quantity) doble FK
+    Users (One-to-Many) (Name, password, id)
+
+Lista final de HTMLS:
+
+-Pantalla de inicio donde loguear, si falla el login, lo siguiente ha de ser llevarte a la propia ventana (next).
+-Pantalla ya logueada donde gestionar los datos adscritos a ti ¿como owner?
+

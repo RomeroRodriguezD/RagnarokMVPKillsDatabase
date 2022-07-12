@@ -1,0 +1,11 @@
+def ClassyView(View):
+
+	def get(self, request):
+		blablabla
+		return render(request, 'x.html', variables_diccionario)
+
+	def post(self, request):
+		guess = request.POST.get('guess') #Coge la variable del formulario
+		msg = checkguess(guess)
+		return render(request, 'x.html', variables_diccionarioconmsg)
+		

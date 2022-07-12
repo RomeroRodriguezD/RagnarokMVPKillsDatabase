@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invent</title>
+</head>
+<body>
+
+{% block content %}
+<h1>Esto es un invent como un piano</h1>
+<p>
+
+    {%  if guess == '0' %}
+        Cero = mierda seca
+    {% else %}
+        Pon un número mayor que cero.
+    {%  endif %}
+
+{% endblock %}
+
+</p>
+</body>
+</html>
