@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MVP Database</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'RagnarokDatabase/registro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'registro.css' %}">
 </head>
 <body>
 
@@ -26,11 +26,11 @@
 {% block content %}
 
 <video autoplay muted loop id="myVideo">
-  <source src="{% static 'RagnarokDatabase/video.mp4' %}" type="video/mp4">
+  <source src="{% static 'video.mp4' %}" type="video/mp4">
 </video>
 <div >
-    <img class="nidhog" src="{% static 'RagnarokDatabase/nidhogreversed.gif' %}">
-        <img class="fenrir" src="{% static 'RagnarokDatabase/fenrir.gif' %}">
+    <img class="nidhog" src="{% static 'nidhogreversed.gif' %}">
+        <img class="fenrir" src="{% static 'fenrir.gif' %}">
 </div>
 
     {% if user.is_authenticated %}
