@@ -1,5 +1,5 @@
 """
-WSGI config for RagnarokDBuwu project.
+WSGI config for RagnarokDB project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
