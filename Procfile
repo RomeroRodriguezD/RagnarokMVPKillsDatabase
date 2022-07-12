@@ -1,1 +1,1 @@
-web: gunicorn RagnarokDB.wsgi
+web: python manage.py collectstatic --no-input; gunicorn RagnarokDB.wsgi
