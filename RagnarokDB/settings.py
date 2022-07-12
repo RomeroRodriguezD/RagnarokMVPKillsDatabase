@@ -87,10 +87,10 @@ MESSAGE_TAGS = {
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'devdi5dii9ihal',
-        'USER': 'bedujzhleveibc',
-        'PASSWORD': '2caaa71b5ac4f51e60531aab4ac217cc6b12416525c9651fba9c1d196a02418a',
-        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd9l3ncb8ot0qqd',
+        'USER': 'olthhcoovtpnlu',
+        'PASSWORD': '8b98c57127466fe0e293ca56f47cfaf81c96c2d098680dfd62f81133236dcbdb',
+        'HOST': 'ec2-34-242-8-97.eu-west-1.compute.amazonaws.com',
         'PORT': '5432'
     }
 }
