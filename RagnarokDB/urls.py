@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('RagnarokDatabase/', include('RagnarokDatabase.urls')), # Incluir las URl de esa app # Los include puede tener una variable namespace='string'
+    path('', include('RagnarokDatabase.urls')), # Incluir las URl de esa app # Los include puede tener una variable namespace='string'
     path('accounts/', include('django.contrib.auth.urls'))#                                                          # así dan lugar a direcciones como: url 'namespace:nombre_view'.
 ]
