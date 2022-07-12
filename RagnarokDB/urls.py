@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import settings
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('RagnarokDatabase.urls')), # Incluir las URl de esa app # Los include puede tener una variable namespace='string'
-    path('accounts/', include('django.contrib.auth.urls'))#                                                          # así dan lugar a direcciones como: url 'namespace:nombre_view'.
+    path('accounts/', include('django.contrib.auth.urls')),#       # así dan lugar a direcciones como: url 'namespace:nombre_view'.
+    path('logout/', auth_views.LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout')
 ]
