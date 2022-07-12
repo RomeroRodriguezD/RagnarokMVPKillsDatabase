@@ -69,7 +69,7 @@ def register(request):
     else:
         form = Registration()
 
-    return render(request, 'RagnarokDatabase/registro.html', {'form':form})
+    return render(request, 'RagnarokDatabase/Registro.html', {'form':form})
 
 def login_request(request):
     if request.method == "POST":

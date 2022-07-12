@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-r4u5^**5(s8r0iitm1yb#rs)9u#@9h)sd4z5!e=!ed3h^jv=i#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ragnarokmvpkillsdatabase.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ragnarokmvpkillsdatabase.herokuapp.com']
 
 
 # Application definition
@@ -85,12 +85,9 @@ MESSAGE_TAGS = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default':{'ENGINE': 'django.db.backends.postgresql_psycopg2',
-                'NAME': 'devdi5dii9ihal',
-                'USER': 'bedujzhleveibc' ,
-                'PASSWORD': '2caaa71b5ac4f51e60531aab4ac217cc6b12416525c9651fba9c1d196a02418a',
-                'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
-                'PORT': '5432'
+    'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -136,7 +133,7 @@ STATIC_URL = '/static/'
 #os.path.join(BASE_DIR, "RagnarokDatabase/static"),)
 
 LOGIN_REDIRECT_URL = "RagnarokDatabase/mvpkills.html"
-LOGOUT_REDIRECT_URL = "registration/login.html"
+LOGOUT_REDIRECT_URL = "login1"
 
 STATIC_ROOT = (os.path.join(BASE_DIR, "static_root"))
 
