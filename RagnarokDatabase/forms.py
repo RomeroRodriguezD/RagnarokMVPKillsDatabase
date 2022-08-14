@@ -36,7 +36,7 @@ class MvpKill(forms.Form):
         for row in listmvp.itertuples():
                 CHOICES.append(row)
         name = forms.ChoiceField(choices=CHOICES)
-        quantity = forms.IntegerField(required=False)
+        quantity = forms.IntegerField(required=False, initial=1)
         owner=""
 
 
