@@ -109,10 +109,19 @@ def mvp_database(request):
                     mvp = names_list[mvp][1] #gets MVP name
                     owner = request.user
                     monster = Kills.objects.get(owner=owner, name=mvp)
-                    show_amount = True
-                    form = MvpKill()
-                    #return redirect("database", context={'num_kills':[obj.quantity], 'amount':show_amount, 'mvp_kills':form})
-                    return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[monster.quantity], 'amount':show_amount, 'mvp_kills':form})
+                    if mvp == 'All':
+                        list = Kills.objects.all()
+                        total_amount = 0
+                        for mvp in list:
+                            total_amount += mvp.quantity
+                        show_amount = True
+                        form = MvpKill()
+                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[total_amount], 'amount':show_amount, 'mvp_kills':form})
+                    else:
+                        show_amount = True
+                        form = MvpKill()
+                        #return redirect("database", context={'num_kills':[obj.quantity], 'amount':show_amount, 'mvp_kills':form})
+                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[monster.quantity], 'amount':show_amount, 'mvp_kills':form})
 
                 else:
                     mvp = int(form.cleaned_data.get('name'))
