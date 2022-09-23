@@ -18,7 +18,7 @@ class Registration(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username", "email")  #Parece ser que no he de añadir ningún campo de contraseña aquí
+        fields = ("username", "email")  # No password field needed
 
     def save_user(self, commit=True):
         user = super(Registration, self).save(commit=False)
@@ -33,13 +33,13 @@ class MvpKill(forms.Form):
         fields = ("name", "quantity")
         CHOICES = []
         listmvp = pd.read_csv('RagnarokDatabase/static/Lista MVP.csv')
+        
         for row in listmvp.itertuples():
                 CHOICES.append(row)
+                
         name = forms.ChoiceField(choices=CHOICES)
         quantity = forms.IntegerField(required=False, initial=1)
         owner=""
-
-
 
 class LoginForm(forms.Form):
     email = forms.EmailField(label='Your email')
