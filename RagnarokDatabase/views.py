@@ -25,29 +25,6 @@ from .owner import OwnerCreateView, OwnerUpdateView, OwnerDetailView
 def index(request):
     return HttpResponse('Hola ke ase, kuentame lo k ase')   #Esto me lo devuelve si añado a la url /RagnarokDatabase
 
-
-
-
-# ------------------ Class Views - Inheritance example --------- #
-'''
-class MainView(View):
-
-    def get(self, request): # Añadir variables aquí si hubiera que parsear inputs
-        response = """<!DOCTYPE html>
-        <html lang="en">
-        <head><meta charset="UTF-8"><title>Invent</title></head>
-        <body>
-        <h1>Tukulo mirando a Gernika</h1>""" + """</body></html>"""  # Esto tiene que ir junto, escape evita injection
-        return HttpResponse(response)
-
-def bounce(request): # Ejemplo de redirect
-    return HttpResponseRedirect('https://www.idealista.es')
-
-class InventView(View):
-    def get(self, request, guess):
-        x = {'guess':guess}
-        return render(request, 'test.html', x)'''
-
 # ------------------ FORMS ------------------- #
 
 def register(request):
@@ -60,7 +37,6 @@ def register(request):
             login(request, user)
             messages.success(request, "Registration successful")
             # process the data in form.cleaned_data as required
-            # ...
             # redirect to a new URL:
             return render(request, 'RagnarokDatabase/registrado.html', {'form': form.data}) # Form.data envía los datos SIN los campos, usando render.
             #return redirect('register')
@@ -82,7 +58,6 @@ def login_request(request):
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
                 return redirect("database")
-
             else:
                 messages.error(request,"Invalid username or password.")
         else:
@@ -147,7 +122,6 @@ def mvp_database(request):
     form = MvpKill()
     context = {"mvp_kills": form}
     return render(request, 'RagnarokDatabase/mvpkills.html', context)
-    #return HttpResponse('RagnarokDatabase/mvpkills.html', context)
 
 # Owner views
 
