@@ -30,5 +30,5 @@ class OwnerUpdateView(LoginRequiredMixin, UpdateView):
 
 class OwnerDetailView(DetailView):
     """
-    Sub-class the DetailView to pass the request to the form.
+    Sub-class the DetailView to pass the request to the form. For now, won't use it.
     """
