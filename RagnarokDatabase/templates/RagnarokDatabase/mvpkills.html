@@ -196,33 +196,22 @@
                     <form class="mvpform" action="" method="POST">
                             {% csrf_token %}
                             {{ mvp_kills }}
-                        <div id='outer'>
-                            
-                            <div class='inner'><input class="btn btn-primary mvp" type="submit" value="Add kills"/> </div>
-                            <div class='inner'><input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/> </div>
-                            <div class='inner'><input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total"/> </div>
-                        </div>                                      
+                 <div class="dInput" v-if="activeStage == 3">
+              <div class="dInput-item">
+                    <input class="btn btn-primary mvp" type="submit" value="Add kills"/>
+              </div>
+              <div class="dInput-item">
+                <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/>
+                <input type="text" id="name">
+              </div>
+              <div class="dInput-item">
+             <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total"/>
+              </div>
+            </div>                               
                     </form>
                     </p>
                     
-        <div class="dInput" v-if="activeStage == 3">
-  <div class="dInput-item">
-    <label for="name">Username*</label>
-    <input type="text" id="name">
-  </div>
-  <div class="dInput-item">
-    <label for="name">Username*</label>
-    <input type="text" id="name">
-  </div>
-  <div class="dInput-item">
-    <label for="name">Username*</label>
-    <input type="text" id="name">
-  </div>
-  <div class="dInput-item">
-    <label for="name">Username*</label>
-    <input type="text" id="name">
-  </div>
-</div>
+
         
         
         
