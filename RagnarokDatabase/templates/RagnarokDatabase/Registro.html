@@ -3,185 +3,169 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 
-    <style>
-         body {
-             background: rgb(36,22,0);
-             background: linear-gradient(90deg, rgba(36,22,0,0.8239670868347339) 0%, 
-                         rgba(18,57,69,0.8239670868347339) 17%, rgba(29,65,76,1) 62%, rgba(137,155,158,0.989233193277311) 100%);
-        }  
+        <style>
+             body {
 
-        .submit {
+                    background-image: url('{% static "1_ragnarok_online.jpg"%}');          
+                    max-height: 80%;
+                    color:white;     
+            }  
 
-            margin-top: 20px;
-            color:white;
-            width: 180px;
-            
-        }
+            .submit {
 
-        .nidhog {
+                margin-top: 20px;
+                color:white;
+                width: 180px;
 
-        margin:120px 410px;
+            }
 
-        }
+            h1, h2 {
 
-        h1, h2 {
+                color:white;
+                letter-spacing: 1px;
+            }
 
-            color:white;
-            letter-spacing: 1px;
-        }
-
-        body {
-
-            max-height: 80%;
-
-        }
-        
-        .styleform {
-            
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #fff;
-            max-width: 400px;
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0);
-
-        }
-
-        .flexcon {
-
-            position: absolute;
-            top: 40%!important;
-            left: 50%!important;
-            transform: translate(-50%, -50%);
-
-        }
-
-        input {
-
-            margin-bottom: 20px;
-            margin-top: 20px;
-            background: transparent;
-            padding: 10px;
-            font-size: 17px;
-            border-radius: 30px;
-            color: white!important;
-            text-align: center;
-
-        }
-
-
-        .dropdown-menu {
-            width:100%;
-            text-align: center;
-        }
-
-        @media (min-width: 600px) {
 
             .styleform {
 
-                margin-top: -200px;
-                margin-left: 50px;
-                font-size: 20px;
-            }
-
-            .logornot {
-
-                margin-left: 890px;
-                font-size: 20px;
-                color: white;
-                width: 500px;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+                max-width: 400px;
+                border-radius: 10px;
+                background: rgba(0, 0, 0, 0);
 
             }
 
-        }
+            .flexcon {
 
-        @media (max-width: 600px) {
-
-             .styleform {
-
-                margin-top: -210px;
-                margin-left: 150px;
-                font-size: 20px;
-            }
-
-            .logornot {
-
-                margin-left: 0px;
-                margin-top: 200px;
-                font-size: 20px;
-                color: white;
-                width: 500px;
+                position: absolute;
+                top: 40%!important;
+                left: 50%!important;
+                transform: translate(-50%, -50%);
 
             }
 
-            img {
+            input {
 
-                width:30%;
-                height: 180%;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                background: transparent;
+                padding: 10px;
+                font-size: 17px;
+                border-radius: 30px;
+                color: white!important;
+                text-align: center;
 
             }
-          }
-        }
 
-    </style>
-</head>
-<body>
+            .dropdown-menu {
+                width:100%;
+                text-align: center;
+            }
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid ">
-      <a class="navbar-brand">Ragnarok MVP Killing Database </a>
+            @media (min-width: 600px) {
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                .styleform {
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Your account
-          </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                {% if user.is_authenticated %}
-                <li class="nav-item"><a class="dropdown-item" href="{% url 'database' %}">Database</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
-                {% else %}
-                <li class="nav-item"><a class="dropdown-item" href="{% url 'login1' %}">Login</a></li>
-                {% endif %}
-            </ul>
-        </li>
-       </ul>
+                    margin-top: -200px;
+                    margin-left: 50px;
+                    font-size: 20px;
+                }
+
+                .logornot {
+
+                    margin-left: 890px;
+                    font-size: 20px;
+                    color: white;
+                    width: 500px;
+
+                }
+
+            }
+
+            @media (max-width: 600px) {
+
+                 .styleform {
+
+                    margin-top: -210px;
+                    margin-left: 150px;
+                    font-size: 20px;
+                }
+
+                .logornot {
+
+                    margin-left: 0px;
+                    margin-top: 200px;
+                    font-size: 20px;
+                    color: white;
+                    width: 500px;
+
+                }
+
+                img {
+
+                    width:30%;
+                    height: 180%;
+
+                }
+              }
+            }
+        </style>
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid ">
+          <a class="navbar-brand">Ragnarok MVP Killing Database </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Your account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="dropdown-item" href="{% url 'database' %}">Database</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+                 {% else %}
+                    <li class="nav-item"><a class="dropdown-item" href="{% url 'login1' %}">Login</a></li>
+                 {% endif %}
+              </ul>
+            </li>
+           </ul>
+         </div>
       </div>
-  </div>
-</nav>
+    </nav>
 
-<div class="row">
-    <div>
+    <div class="row">
+        <div class="container-fluid flexcon col-lg-2">
+           <p>
+               <br>
+               <form class="styleform" action="register" method="post">
+                  {% csrf_token %}
+                  {{ form }}
+                  <br>
+                  <input class="submit" type="submit" value="Register">
+                </form>
+            </p>
+         </div>
     </div>
 
-    <div class="container-fluid flexcon col-lg-2">
-        <p>
-        <br>
-        <form class="styleform" action="register" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <br>
-            <input class="submit" type="submit" value="Register">
-        </form>
-        </p>
-      </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-<footer class="fixed-bottom pb-20" style="text-align:center; font-size:25; background-color: grey">COPYRIGHT Chimpancé Inalámbrico 2022</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+    <footer class="fixed-bottom pb-20" style="text-align:center; font-size:25; background-color: grey">COPYRIGHT Chimpancé Inalámbrico 2022</footer>
 </html>
