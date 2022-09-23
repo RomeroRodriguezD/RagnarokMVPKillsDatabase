@@ -91,12 +91,12 @@ def mvp_database(request):
                             total_amount += mvp.quantity
                         show_amount = True
                         form = MvpKill()
-                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[total_amount], 'amount':show_amount, 'mvp_kills':form})
+                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':total_amount, 'amount':show_amount, 'mvp_kills':form})
                     else:
                         show_amount = True
-                        form = MvpKill()
+                        form = MvpKill()                     
                         
-                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[monster.quantity], 'amount':show_amount, 'mvp_kills':form})
+                        return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':monster.quantity, 'amount':show_amount, 'mvp_kills':form})
                 elif "All" in request.POST:
                     
                     list = Kills.objects.all()
