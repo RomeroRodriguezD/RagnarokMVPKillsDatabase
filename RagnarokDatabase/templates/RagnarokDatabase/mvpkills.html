@@ -28,7 +28,7 @@
                 margin-top: 20px;
                 color:white;
                 width: 500px;
-                background-color: black;
+                background: rgba(0,0,0,0.5);
 
             }
 
@@ -199,9 +199,11 @@
                     <form class="mvpform" action="" method="POST">
                             {% csrf_token %}
                             {{ mvp_kills }}
-                        <input class="btn btn-primary mvp" type="submit" value="Add kills"/>
-                        <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/>
-                        <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/>
+                        <ul>
+                        <li> <input class="btn btn-primary mvp" type="submit" value="Add kills"/></li>
+                        <li> <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/></li>
+                        <li> <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/></li>
+                        </ul>                                      
                     </form>
                     </p>
                     {% if amount %}
