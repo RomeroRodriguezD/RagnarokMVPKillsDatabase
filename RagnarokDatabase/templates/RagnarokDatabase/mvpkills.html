@@ -40,7 +40,7 @@
 
             .mvpform ul {
 
-                display: inline;
+                display: inline-block;
 
             }
 
@@ -200,9 +200,9 @@
                             {% csrf_token %}
                             {{ mvp_kills }}
                         <ul>
-                        <li> <input class="btn btn-primary mvp" type="submit" value="Add kills"/></li>
-                        <li> <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/></li>
-                        <li> <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/></li>
+                            <input class="btn btn-primary mvp" type="submit" value="Add kills"/></li>
+                            <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/></li>
+                            <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/></li>
                         </ul>                                      
                     </form>
                     </p>
