@@ -28,6 +28,7 @@
                 margin-top: 20px;
                 color:white;
                 width: 500px;
+                background-color: black;
 
             }
 
@@ -64,6 +65,7 @@
                 text-align: center;
                 display:inline;
                 max-width: 100px;
+                max-height: 45px;
 
             }
 
@@ -154,9 +156,9 @@
                .comment {
 
                       margin-left: 140px;
-
+                   
                }
-          }
+            }
         }
       </style>
     </head>
@@ -203,15 +205,17 @@
                     </form>
                     </p>
                     {% if amount %}
-                    <div class="comment">
-                        Number of kills of the MVP {{ nombre }}:    {{ num_kills }}</div>
+                        <div class="comment">
+                             Number of kills of the MVP {{ nombre }}:  {{ num_kills }}</div>
+                        </div>
                     {% endif %}
 
                     {% if nomvp %}
-                    <div class="comment">
-                        You haven't add any data for that MVP yet.
-                             {% endif %}
-                        </div>
+                        <div class="comment">
+                            You haven't add any data for that MVP yet.
+                         </div>
+                    {% endif %}
+                        
                     {% else %}
                         <div class="container">
                             <p style="font-size: 30px;">Log in to use the MVP Database.</p>
