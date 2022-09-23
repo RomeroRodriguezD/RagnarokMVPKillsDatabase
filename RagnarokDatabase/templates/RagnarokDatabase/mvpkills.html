@@ -21,7 +21,13 @@
                 background-image: url('{% static "1_ragnarok_online.jpg"%}');          
                 max-height: 80%;
                 color:white;
-            }                      
+            }
+            
+            #outer
+                    {
+                        width:100%;
+                        text-align: center;
+                    }
 
             .mvp {
 
@@ -91,48 +97,9 @@
 
           @media (min-width: 600px) {
 
-              .styleform {
 
-                   margin-top: -200px;
-                    margin-left: 50px;
-                    font-size: 20px;
-                  }
-
-               .logornot {
-
-                   margin-left: 890px;
-                   font-size: 20px;
-                   color: white;
-                   width: 500px;
-                }
-          }
 
           @media (max-width: 600px) {
-
-              .styleform {
-
-                    margin-top: -210px;
-                    margin-left: 150px;
-                    font-size: 20px;
-                  
-               }
-
-               .logornot {
-
-                     margin-left: 0px;
-                     margin-top: 200px;
-                     font-size: 20px;
-                     color: white;
-                     width: 500px;
-
-               }
-
-               img {
-
-                   width:30%;
-                   height: 180%;
-
-               }
 
 
                label {
@@ -200,11 +167,11 @@
                     <form class="mvpform" action="" method="POST">
                             {% csrf_token %}
                             {{ mvp_kills }}
-                        <ul>
-                            <input class="btn btn-primary mvp" type="submit" value="Add kills"/></li>
-                            <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/></li>
-                            <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/></li>
-                        </ul>                                      
+                        <div id='outer'>
+                            <input class="btn btn-primary mvp" type="submit" value="Add kills"/>
+                            <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/>
+                            <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/>
+                        </div>                                      
                     </form>
                     </p>
                     {% if amount %}
