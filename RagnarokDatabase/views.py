@@ -105,7 +105,7 @@ def mvp_database(request):
                         total_amount += mvp.quantity
                     show_amount = True
                     form = MvpKill()
-                    return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':[total_amount], 'amount':show_amount, 'mvp_kills':form})
+                    return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':total_amount, 'amount':show_amount, 'mvp_kills':form})
                     
                     
                 else:
