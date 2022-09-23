@@ -31,22 +31,10 @@
 
             .mvpform ul {
 
-                display: inline;
+                display: inline-block;
 
             }
 
-            .styleform {
-
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: #fff;
-                max-width: 400px;
-                border-radius: 10px;
-                background: rgba(0, 0, 0, 0);
-
-            }
 
             .flexcon {
 
@@ -84,19 +72,20 @@
                 margin-left: 50px;
 
             }
-                    .dropdown-menu {
-                        width:100%;
-                        text-align: center;
-                    }
+            
+            .dropdown-menu {
+                width:100%;
+                text-align: center;
+            }
 
-              @media (min-width: 600px) {
+          @media (min-width: 600px) {
 
-                        .styleform {
+              .styleform {
 
-                            margin-top: -200px;
-                            margin-left: 50px;
-                            font-size: 20px;
-                        }
+                   margin-top: -200px;
+                    margin-left: 50px;
+                    font-size: 20px;
+                  }
 
                         .logornot {
 
@@ -207,7 +196,8 @@
                             {% csrf_token %}
                             {{ mvp_kills }}
                         <input class="btn btn-primary mvp" type="submit" value="Add kills"/>
-                        <input class="btn btn-primary mvp" type="submit" name="check" value="Check"/>
+                        <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/>
+                        <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/>
                     </form>
                     </p>
                     {% if amount %}
