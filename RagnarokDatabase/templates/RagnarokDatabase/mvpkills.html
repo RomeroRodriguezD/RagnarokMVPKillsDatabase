@@ -29,7 +29,7 @@
                         text-align: center;
                     }
 
-            .mvp {
+            .inner {
 
                 display: inline;
 
@@ -164,9 +164,10 @@
                             {% csrf_token %}
                             {{ mvp_kills }}
                         <div id='outer'>
-                            <input class="btn btn-primary mvp" type="submit" value="Add kills"/>
-                            <input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/>
-                            <input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/>
+                            
+                            <div class='inner'><input class="btn btn-primary mvp" type="submit" value="Add kills"/> </div>
+                            <div class='inner'><input class="btn btn-primary mvp" type="submit" name="check" value="Check MVP"/> </div>
+                            <div class='inner'><input class="btn btn-primary mvp" type="submit" name="checkall" value="Check total amount"/> </div>
                         </div>                                      
                     </form>
                     </p>
