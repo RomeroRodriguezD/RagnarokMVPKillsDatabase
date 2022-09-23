@@ -150,8 +150,12 @@
          </div>
       </div>
     </nav>
-
+        
     <div class="row">
+        
+        {% if user.is_authenticated %}
+            <p>You're already logged in.</p>
+        {% else %}
         <div class="container-fluid flexcon col-lg-2">
            <p>
                <br>
@@ -163,6 +167,7 @@
                 </form>
             </p>
          </div>
+        {% endif %}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
