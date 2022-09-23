@@ -3,27 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Invent</title>
+    <title>Log page</title>
 </head>
 <body>
-
+    
 {% block content %}
-
  <h1> Current request.path {{ request.path }}</h1>
-{% if user.is_authenticated %}
-    <pre>
-    Name : {{ user.get_full_name }}
-    id : {{ user.id }}
-    </pre>
-<br>
-
-You can <a href="{% url 'logout' %}?next={% url 'open' %}">Logout</a>
-{% else %}
-You are not logged in.
-<br>
-<a href="{% url 'login' %}?next={{ request.path }} "> Login </a> if you like.
-{% endif %}
-
+    {% if user.is_authenticated %}
+        <pre>
+            Name : {{ user.get_full_name }}
+            id : {{ user.id }}
+        </pre>
+        <br>
+        You can <a href="{% url 'logout' %}?next={% url 'open' %}">Logout</a>
+  {% else %}
+    You are not logged in.
+    <br>
+    <a href="{% url 'login' %}?next={{ request.path }} "> Login </a> if you like.
+    {% endif %}
 {% endblock %}
 
 
