@@ -10,8 +10,9 @@
 
          body {
              
-            background-image: url('{% static "1_ragnarok_online.jpg"%}')
-
+            background-image: url('{% static "1_ragnarok_online.jpg"%}');          
+            max-height: 80%;
+            color:white;
         }                      
           
         .submit {
@@ -22,35 +23,10 @@
 
         }
 
-        .nidhog {
-
-        margin:120px 410px;
-
-        }
-
-
         h1, h2 {
 
             color:white;
             letter-spacing: 1px;
-        }
-
-        #myVideo {
-          position: fixed;
-          right: 0;
-          bottom: 0;
-          min-width: 100%;
-          min-height: 100%;
-          max-width: 100%;
-          z-index: -1;
-
-        }
-
-        body {
-
-            max-height: 80%;
-            color:white;
-
         }
 
         .mvpform ul {
@@ -189,8 +165,8 @@
                             margin-left: 140px;
 
                         }
+                    }
                 }
-           }
         </style>
 </head>
 <body>
@@ -229,10 +205,6 @@
 
 <div class="row">
 
-    <div >
-    <img class="nidhog" src="{% static 'RagnarokDatabase/nidhogreversed.gif' %}">
-    </div>
-
         <div class="container-fluid flexcon col-lg-2">
             {% if user.is_authenticated %}
                 <p>
@@ -251,7 +223,7 @@
 
                 {% if nomvp %}
                 <div class="comment">
-                    You haven't killed any MVP of that kind yet.
+                    You haven't add any data for that MVP yet.
                          {% endif %}
                     </div>
                 {% else %}
