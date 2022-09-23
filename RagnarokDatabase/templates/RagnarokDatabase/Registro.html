@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 
@@ -10,6 +9,15 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 
         <style>
+            
+            .navbar {
+                
+                  position: fixed; /* Set the navbar to fixed position */
+                  top: 0; /* Position the navbar at the top of the page */
+                  width: 100%; /* Full width */
+             }
+            
+            
              body {
 
                     background-image: url('{% static "1_ragnarok_online.jpg"%}');          
@@ -34,7 +42,7 @@
 
             .styleform {
 
-                position: relative;
+                position: absolute;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
