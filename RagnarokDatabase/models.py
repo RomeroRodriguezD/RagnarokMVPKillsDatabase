@@ -4,10 +4,9 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.conf import settings
 
-
-# Create your models here.
+# ORM
 # python manage.py makemigrations + python manage.py migrate -> Actualizar la db.sqlite3
-#Object relational mapping (ORM). Allows you to have multiple databases
+
 
 class MVP(models.Model):  # Ya están creados con el  script csvreaderexample.py
     name= models.CharField(max_length=128)
@@ -15,14 +14,6 @@ class MVP(models.Model):  # Ya están creados con el  script csvreaderexample.py
     def __str__(self):
         '''String for representing the Model Object'''
         return self.name
-
-#class User(models.Model):
- #   name=models.CharField(max_length=128)
-  #  password=models.CharField(max_length=128)
-
-   # def __str__(self):
-     #   '''String for representing the Model Object'''
-    #   return self.name
 
 class Kills(models.Model):
     CHOICES = []
