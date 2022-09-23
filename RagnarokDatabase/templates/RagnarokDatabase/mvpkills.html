@@ -112,29 +112,16 @@
                 text-align: center;
             }
 
-          @media (min-width: 600px) {
-
-            }
-
-          @media (max-width: 600px) {
-
+          @media (max-width: 640px) {
 
                label {
 
                         display: inline-block;
-
                 }
 
                .mvp {
 
                        display: inline;
-
-               }
-
-               .comment {
-
-                      margin-left: 140px;
-                   
                }
             }
         }
@@ -187,10 +174,8 @@
               <div class="dInput-item">
              <input class="btn btn-primary mvp" type="submit" name="All" value="Check total"/>
               </div>
-            </div>                               
-                    </form>
-                    </p>    
-        
+            </div>
+       
                     {% if amount %}
                         <div class="comment">
                              Number of kills of the MVP {{ nombre }}:  {{ num_kills }}
@@ -203,11 +188,15 @@
                          </div>
                     {% endif %}
                         
-                    {% else %}
+                    </form>
+                    </p>    
+        
+                        
+                 {% else %}
                         <div class="container">
                             <p style="font-size: 30px;">Log in to use the MVP Database.</p>
                         </div>
-                {% endif %}
+                 {% endif %}
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
