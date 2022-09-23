@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 {% extends "RagnarokDatabase/base.html" %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registered</title>
-    <style> 
-        body {
-             
-            background-image: url('{% static "1_ragnarok_online.jpg"%}');          
-            max-height: 80%;
-            color:white;
-        }                         
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registered</title>
+        <style> 
+            body {
 
-
+                background-image: url('{% static "1_ragnarok_online.jpg"%}');          
+                max-height: 80%;
+                color:white;
+            }                         
+        </style>
+    </head>
     
-<body>
+    <body>
 
-{% block content %}
+        {% block content %}
 
-Registered as {{ form.username }}, congratulations, you can now start to register your own MVP kills.
+            Registered as {{ form.username }}, congratulations, you can now start to register your own MVP kills.
 
-<br>
+            <br>
 
-<a href="{% url 'register' %} "> Back </a>
+            <a href="{% url 'register' %} "> Back </a>
 
-{% endblock %}
+        {% endblock %}
 
-
-
-</p>
-</body>
+     </body>
 </html>
