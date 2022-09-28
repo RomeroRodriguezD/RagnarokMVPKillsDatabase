@@ -1,3 +1,0 @@
-Many-to-Many based
-
-pip install django-extensions -> Requisito

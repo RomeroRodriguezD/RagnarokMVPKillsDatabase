@@ -1,6 +1,0 @@
-Para las templates, poner el nombre de la aplicación 2 veces en el path, tipo:
-
-app/templates/app/template.html
-
-TEMPLATE INHERITANCE
-
