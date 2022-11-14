@@ -5,10 +5,8 @@ from django.contrib.auth.models import User
 from django.conf import settings
 
 # ORM
-# python manage.py makemigrations + python manage.py migrate -> Actualizar la db.sqlite3
 
-
-class MVP(models.Model):  # Ya están creados con el  script csvreaderexample.py
+class MVP(models.Model):  
     name= models.CharField(max_length=128)
 
     def __str__(self):
