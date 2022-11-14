@@ -6,8 +6,7 @@ from .models import Kills
 import pandas as pd
 
 class Registration(UserCreationForm):
-    #yourname = forms.CharField(label='Your name ', max_length=100)
-    #yourpassword = forms.CharField(label='Your password ', max_length=100)
+
     email = forms.EmailField(label='Your email')
 
     def __init__(self, *args, **kwargs):
