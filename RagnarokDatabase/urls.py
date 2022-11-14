@@ -11,10 +11,4 @@ urlpatterns = [
     path('database', views.mvp_database, name="database"),
     path("login", views.login_request, name="login1")
 
-
-    # Ejemplo de pre-defined class con Django
-    # path('',TemplateView.as_view(template_name='views/main.html')) -> Entiendo que views puede ser "templates" como carpeta?
-    # Otro ejemplos:
-    # path('carpeta/<input>', views.nombreview)
-    # path ('main', views.MainView.as_view()) -> Revisar as_view().
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #Para usar los static
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
