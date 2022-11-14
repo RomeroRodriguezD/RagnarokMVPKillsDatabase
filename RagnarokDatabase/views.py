@@ -20,10 +20,6 @@ from django.views.generic import CreateView, UpdateView, DeleteView, ListView, D
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from .owner import OwnerCreateView, OwnerUpdateView, OwnerDetailView
-# Create your views here.
-
-def index(request):
-    return HttpResponse('Hola ke ase, kuentame lo k ase')   #Esto me lo devuelve si añado a la url /RagnarokDatabase
 
 # ------------------ FORMS ------------------- #
 
