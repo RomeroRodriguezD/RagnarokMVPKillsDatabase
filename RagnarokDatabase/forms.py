@@ -34,7 +34,7 @@ class MvpKill(forms.Form):
         listmvp = pd.read_csv('RagnarokDatabase/static/Lista MVP.csv')
         
         for row in listmvp.itertuples():
-                CHOICES.append(row)
+            CHOICES.append(row)
                 
         name = forms.ChoiceField(choices=CHOICES)
         quantity = forms.IntegerField(required=False, initial=1)
