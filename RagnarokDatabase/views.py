@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.utils.html import escape # Esto para evitar code injection en las URL
-from django.views import View # Esto para herencias
+from django.utils.html import escape # Anti-SQL injection
+from django.views import View 
 from django import forms
 from django.db.models import F
 from .forms import Registration, MvpKill
-from django.urls import reverse # Para obtener url by reversing
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
