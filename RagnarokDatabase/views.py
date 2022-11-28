@@ -107,8 +107,10 @@ def mvp_database(request):
                 
                 elif "backup" in request.POST:
                     
-                    list = list(Kills.objects.get(owner=owner).values())
-                    return JsonResponse(json.loads(serialize('json', list)), safe=False)
+                    list = Kills.objects.all()
+                    data = serializers.serialize('json', list)
+                    return HttpResponse(data, content_type='application/json')
+                    
                                       
                 else:
                     mvp = int(form.cleaned_data.get('name'))
