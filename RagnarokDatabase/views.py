@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
+from django.http import JsonResponse
 from django.utils.html import escape # Anti-SQL injection
+from django.core import serializers
 from django.views import View 
 from django import forms
 from django.db.models import F
@@ -101,7 +103,12 @@ def mvp_database(request):
                     show_total = True
                     form = MvpKill()
                     return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':total_amount, 'total':show_total, 'mvp_kills':form})
+                
+                  elif "backup" in request.POST:
                     
+                    # list = Kills.objects.all()
+                    data = serializers.serialize("json", Kills.objects.all())
+                    return JsonResponse(data)                 
                     
                 else:
                     mvp = int(form.cleaned_data.get('name'))
