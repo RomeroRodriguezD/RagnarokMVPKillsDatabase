@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.utils.html import escape # Anti-SQL injection
+from django.core.serializers.json import DjangoJSONEncoder
 from django.core import serializers
 from django.views import View 
 from django import forms
