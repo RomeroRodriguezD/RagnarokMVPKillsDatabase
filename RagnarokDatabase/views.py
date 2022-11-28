@@ -108,7 +108,7 @@ def mvp_database(request):
                     
                     list = Kills.objects.get(owner=owner)
                     data = serializers.serialize("json", list)
-                    return JsonResponse(data, safe=False)                 
+                    return HttpResponse(data)                 
                     
                 else:
                     mvp = int(form.cleaned_data.get('name'))
