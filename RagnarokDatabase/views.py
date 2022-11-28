@@ -104,10 +104,10 @@ def mvp_database(request):
                     form = MvpKill()
                     return render(request,'RagnarokDatabase/mvpkills.html', context={'nombre':mvp,'num_kills':total_amount, 'total':show_total, 'mvp_kills':form})
                 
-                  elif "backup" in request.POST:
+                elif "backup" in request.POST:
                     
                     # list = Kills.objects.all()
-                    data = serializers.serialize("json", Kills.objects.get(owner=owner, name=mvp))
+                    data = serializers.serialize("json", Kills.objects.get(owner=owner))
                     return JsonResponse(data)                 
                     
                 else:
